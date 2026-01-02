@@ -1,11 +1,13 @@
 package eventSourcing
 
-import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
-import akka.persistence.PersistentActor
+
 
 import java.util.Date
 
-object MultiplePersist extends App {
+import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
+import akka.persistence.PersistentActor
+
+object MultiplePersists extends App {
 
   /*
     Diligent accountant: with every invoice, will persist TWO events
@@ -84,3 +86,5 @@ object MultiplePersist extends App {
   accountant ! Invoice("The Supercar Company", new Date, 20004302)
 
 }
+
+
